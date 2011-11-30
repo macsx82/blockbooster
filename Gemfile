@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'simple_form'
 gem 'simple_form'
 gem 'capistrano'
+gem 'polyglot'
 gem 'mongrel', '>= 1.2.0.pre2'
 
 
