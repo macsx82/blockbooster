@@ -1,0 +1,85 @@
+<ul>
+  <li>
+    <form action="http://localhost/wordpress/" id="searchform" class="sidebar_search" method="get">
+      <input type="text" onblur="javascript:inputcheck(this,'blur')" onfocus="javascript:inputcheck(this,'focus')" class="search_input" id="s" name="s" value="Search">
+      <input type="submit" class="submit_search" value="go">
+    </form>
+  </li>
+  <li>
+    <h2>Genres</h2>
+    <ul>
+      <% for genre in (Genre.all) %>
+          <li class="cat-item cat-item-1">
+            <%= genre.description %>
+          </li>
+      <% end %>
+      <%= link_to 'New Genre', new_genre_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Author</h2>
+    <ul>
+      <% for author in (Author.all) %>
+          <li class="cat-item cat-item-1">
+            <%= author.name %>,<%= author.surname %>
+          </li>
+      <% end %>
+      <%= link_to 'New Author', new_author_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Album</h2>
+    <ul>
+      <% for album in (Album.all) %>
+          <li class="cat-item cat-item-1">
+            <%= album.title %> (<%= album.year %>)
+          </li>
+      <% end %>
+      <%= link_to 'New Album', new_album_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Manufacturers</h2>
+    <ul>
+      <% for manufact in (Manufactorer.all) %>
+          <li class="cat-item cat-item-1">
+            <%= manufact.name %>
+          </li>
+      <% end %>
+      <%= link_to 'New Manufactorer', new_manufactorer_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Editors</h2>
+    <ul>
+      <% for editor in (Editor.all) %>
+          <li class="cat-item cat-item-1">
+            <%= editor.name %>
+          </li>
+      <% end %>
+      <%= link_to 'New Editor', new_editor_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Operating Systems</h2>
+    <ul>
+      <% for os in (OperatingSystem.all) %>
+          <li class="cat-item cat-item-1">
+            <%= os.name %>
+          </li>
+      <% end %>
+      <%= link_to 'New Operating system', new_operating_system_path %>
+    </ul>
+  </li>
+  <li>
+    <h2>Supports</h2>
+    <ul>
+      <% for support in (Support.all) %>
+          <li class="cat-item cat-item-1">
+            <%= support.description %>
+          </li>
+      <% end %>
+      <%= link_to 'New Support', new_support_path %>
+    </ul>
+  </li>
+</ul>

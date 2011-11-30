@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blockbooster</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1 class="logo">Blockbooster</h1>
+    <div class="description">
+      Personal Audio/Video/Book manager
+    </div>
+    <%= render :partial => 'layouts/navigation_menu' %>
+  </div>
+  <div class="content">
+    <div class="content_left">
+      <div class="content_right">
+        <!-- Mainbar -->
+        <div class="mainbar">
+          <div class="mainbar_top">
+            <div class="mainbar_bottom">
+              <div class="mainbar_inner">
+                <%= flash[:notice] if flash[:notice] %>
+                <div class="post ">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+          <%= render :partial => 'layouts/sidebar' %>
+        </div>
+        <div class="clear">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_left">
+        <div class="footer_right">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

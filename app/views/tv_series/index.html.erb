@@ -1,0 +1,35 @@
+<h1>Listing tv_series</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Director</th>
+    <th>Storyline</th>
+    <th>Seasons</th>
+    <th>Language</th>
+    <th>Producer</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tv_series.each do |tv_series| %>
+  <tr>
+    <td><%= tv_series.title %></td>
+    <td><%= tv_series.director_id %></td>
+    <td><%= tv_series.storyline %></td>
+    <td><%= tv_series.seasons %></td>
+    <td><%= tv_series.language %></td>
+    <td><%= tv_series.producer_id %></td>
+    <td><%= tv_series.year %></td>
+    <td><%= link_to 'Show', tv_series %></td>
+    <td><%= link_to 'Edit', edit_tv_series_path(tv_series) %></td>
+    <td><%= link_to 'Destroy', tv_series, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tv serie', new_tv_series_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @audio_file.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @audio_file.author_id %>
+</p>
+
+<p>
+  <b>Album:</b>
+  <%= @audio_file.album_id %>
+</p>
+
+<p>
+  <b>Track number:</b>
+  <%= @audio_file.track_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_audio_file_path(@audio_file) %> |
+<%= link_to 'Back', audio_files_path %>

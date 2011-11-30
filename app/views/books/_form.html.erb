@@ -1,0 +1,26 @@
+<%= simple_form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="inputs">
+    <%= f.input :title %>
+    <%= f.association :author %>
+    <%= f.input :plot %>
+    <%= f.input :language %>
+    <%= f.input :isbn %>
+    <%= f.association :editor %>
+    <%= f.input :year , :collection => 1982..2011%>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Support</th>
+    <th>Genre</th>
+    <th>Rating</th>
+    <th>Detail</th>
+    <th>Detail type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.support_id %></td>
+    <td><%= product.genre_id %></td>
+    <td><%= product.rating %></td>
+    <td><%= product.detail_id %></td>
+    <td><%= product.detail_type %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Product', new_product_path %>

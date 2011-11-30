@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @producer.name %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @producer.surname %>
+</p>
+
+
+<%= link_to 'Edit', edit_producer_path(@producer) %> |
+<%= link_to 'Back', producers_path %>

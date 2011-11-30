@@ -1,0 +1,14 @@
+<%= simple_form_for(@album) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :title %>
+    <%= f.input :author_id %>
+    <%= f.input :year , :collection => 1900..2011%>
+    <%= f.input :tracks %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Listing manufactorers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manufactorers.each do |manufactorer| %>
+  <tr>
+    <td><%= manufactorer.name %></td>
+    <td><%= link_to 'Show', manufactorer %></td>
+    <td><%= link_to 'Edit', edit_manufactorer_path(manufactorer) %></td>
+    <td><%= link_to 'Destroy', manufactorer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manufactorer', new_manufactorer_path %>

@@ -1,0 +1,13 @@
+<%= simple_form_for(@audio_file) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :title %>
+    <%= f.association :album %>
+    <%= f.input :track_number %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

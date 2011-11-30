@@ -1,0 +1,23 @@
+<h1>Listing supports</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @supports.each do |support| %>
+  <tr>
+    <td><%= support.name %></td>
+    <td><%= link_to 'Show', support %></td>
+    <td><%= link_to 'Edit', edit_support_path(support) %></td>
+    <td><%= link_to 'Destroy', support, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Support', new_support_path %>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @tv_series.title %>
+</p>
+
+<p>
+  <b>Director:</b>
+  <%= @tv_series.director_id %>
+</p>
+
+<p>
+  <b>Storyline:</b>
+  <%= @tv_series.storyline %>
+</p>
+
+<p>
+  <b>Seasons:</b>
+  <%= @tv_series.seasons %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @tv_series.language %>
+</p>
+
+<p>
+  <b>Producer:</b>
+  <%= @tv_series.producer_id %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @tv_series.year %>
+</p>
+
+
+<%= link_to 'Edit', edit_tv_series_path(@tv_series) %> |
+<%= link_to 'Back', tv_series_path %>

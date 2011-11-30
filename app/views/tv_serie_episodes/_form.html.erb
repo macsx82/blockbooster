@@ -1,0 +1,32 @@
+<%= simple_form_for(@tv_serie_episode) do |f| %>
+  <% if @tv_serie_episode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tv_serie_episode.errors.count, "error") %> prohibited this tv_serie_episode from being saved:</h2>
+
+      <ul>
+      <% @tv_serie_episode.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :title %>
+  </div>
+  <div class="field">
+    <%= f.association :tv_serie %>
+  </div>
+  <div class="field">
+    <%= f.input :number %>
+  </div>
+  <div class="field">
+    <%= f.input :season %>
+  </div>
+  <div class="field">
+    <%= f.input :plot %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
